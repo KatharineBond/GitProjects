@@ -1,0 +1,148 @@
+﻿<Window x:Class="SWIFT_СПФС.Настройки"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SWIFT_СПФС"
+        mc:Ignorable="d"
+        Title="Настройки" Height="380" Width="490" WindowStartupLocation="CenterScreen"
+        Icon="pack://siteoforigin:,,,/Icons/icons8-настройки-50.png">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="280"/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="450"/>
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+
+        <TabControl>
+            <TabItem Name="General" Header="Основные">
+                <Grid Background="#FFE0E5E5">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Column="1" Grid.Row="0">Код банка</TextBlock>
+                    <TextBox Name="CodeBnk" Grid.Column="1" Grid.Row="1" MinWidth="20"></TextBox>
+                    <TextBlock Grid.Column="3" Grid.Row="0">SWIFT банка</TextBlock>
+                    <TextBox Name="SWIFTBnk" Grid.Column="3" Grid.Row="1" MinWidth="20" HorizontalAlignment="Left" Width="100"></TextBox>
+                    <TextBlock Grid.Row="3" Grid.ColumnSpan="2" Margin="0,0,29,0" Grid.Column="1">Наименование банка</TextBlock>
+                    <TextBox Name="NameBnk" Grid.Column="1" Grid.Row="4" MinWidth="20" Grid.ColumnSpan="3"/>
+                    <TextBlock Grid.Row="6" Grid.ColumnSpan="3" Margin="0.4,0.2,73.4,20.4" Grid.Column="1" Grid.RowSpan="2">Каталог повреждённых файлов</TextBlock>
+                    <TextBox Name="Mist" Grid.Column="1" Grid.Row="7" MinWidth="20" Grid.ColumnSpan="3"/>
+                </Grid>
+
+
+            </TabItem>
+
+            <TabItem Name="SWIFT" Header="SWIFT">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5" />
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="80" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Column="1" Grid.Row="0">Каталог исходящих файлов SWIFT из АБС</TextBlock>
+                    <TextBox Name="PathABSOut" Grid.Column="1" Grid.Row="1" MinWidth="20"></TextBox>
+                    <TextBlock Grid.Column="1" Grid.Row="2">Каталог приёма файлов SWIFT в АБС</TextBlock>
+                    <TextBox Name="PathABSIn" Grid.Column="1" Grid.Row="3" MinWidth="20"></TextBox>
+                    <TextBlock Grid.Column="1" Grid.Row="4">Каталог для хранения файлов SWIFT программой</TextBlock>
+                    <TextBox Name="PathTransit" Grid.Column="1" Grid.Row="5" MinWidth="20"></TextBox>
+                    <TextBlock Grid.Column="1" Grid.Row="6">Каталог для хранения копии файлов SWIFT</TextBlock>
+                    <TextBox Name="PathArc" Grid.Column="1" Grid.Row="7" MinWidth="20"></TextBox>
+                    <TextBlock Grid.Column="1" Grid.Row="8">Каталог для отправки файлов в SWIFT</TextBlock>
+                    <TextBox Name="PathOut" Grid.Column="1" Grid.Row="9" MinWidth="20"></TextBox>
+                    <TextBlock Grid.Column="1" Grid.Row="10">Каталог для приёма файлов из SWIFT</TextBlock>
+                    <TextBox Name="PathIn" Grid.Column="1" Grid.Row="11" MinWidth="20"></TextBox>
+                    <TextBlock Grid.Column="3" Grid.Row="0">Маска файлов</TextBlock>
+                    <TextBox Name="FileMaskOut" Grid.Column="3" Grid.Row="1" MinWidth="20"></TextBox>
+                    <TextBlock Grid.Column="3" Grid.Row="10">Маска файлов</TextBlock>
+                    <TextBox Name="FileMaskIn" Grid.Column="3" Grid.Row="11" MinWidth="20" Height="20" VerticalAlignment="Bottom"></TextBox>
+                </Grid>
+            </TabItem>
+            <TabItem Name="SPFS" Header="СПФС">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5" />
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="80" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Column="1" Grid.Row="0">Каталог входящих сообщений СПФС</TextBlock>
+                    <TextBox Name="SPFSPathIn" Grid.Column="1" Grid.Row="1" MinWidth="20"></TextBox>
+                    <TextBlock Grid.Column="1" Grid.Row="2">Каталог отправляемых сообщений СПФС</TextBlock>
+                    <TextBox Name="SPFSPathOut" Grid.Column="1" Grid.Row="3" MinWidth="20"></TextBox>
+                    <TextBlock Grid.Column="1" Grid.Row="4">Каталог для хранения файлов СПФС программой</TextBlock>
+                    <TextBox Name="SPFSPathTransit" Grid.Column="1" Grid.Row="5" MinWidth="20"></TextBox>
+                    <TextBlock Grid.Column="1" Grid.Row="6">Каталог для хранения копии входящих файлов СПФС</TextBlock>
+                    <TextBox Name="SPFSPathArc" Grid.Column="1" Grid.Row="7" MinWidth="20"></TextBox>
+                    <TextBlock Grid.Column="3" Grid.Row="0">Маска файлов</TextBlock>
+                    <TextBox Name="FileMask" Grid.Column="3" Grid.Row="1" MinWidth="20"></TextBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <Button Name="btnOK" IsDefault="True" Click="Accept_Click" HorizontalAlignment="Left" Margin="282,8,0,0" Grid.Row="1" Width="66">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="pack://siteoforigin:,,,/Icons/icons8-галочка-50.png" Height="15" Width="15" Margin="0,0,15,0" />
+                <TextBlock Text="OK" Margin="0,0,15,0"/>
+            </StackPanel>
+        </Button>
+        <Button Name="btnCancel" IsCancel="True" HorizontalAlignment="Left" Margin="382,8,0,0" Grid.Row="1" Width="66" Height="20" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="pack://siteoforigin:,,,/Icons/icons8-удалить-50.png" Height="15" Width="15" Margin="0,0,2,0" />
+                <TextBlock Text="Отмена"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>
